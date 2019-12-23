@@ -1,0 +1,33 @@
+a, button {
+ text-decoration: none;
+ outline: none;
+ box-shadow: none;
+ border: none;
+}
+
+.ck-btn {
+  border-radius: 4px;
+  height: 62px;
+  display: inline-flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  padding: 0 19px;
+  color: #fff;
+  font-family: $f-museo;
+  font-size: 24px;
+  font-weight: 900;
+  transition: background-color .2s;
+
+  &--blue {
+    background: $c-seafoam-blue;
+    &:hover {
+      background: $c-teal-blue;
+    }
+  }
+
+  &--sm {
+    font-size: 18px;
+    height: 40px;
+  }
+}

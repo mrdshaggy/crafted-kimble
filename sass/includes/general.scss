@@ -1,0 +1,30 @@
+html,
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    * {
+        box-sizing: border-box;
+    }
+}
+
+//container
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1270px;
+}
+
+.text-container {
+    max-width: 850px;
+    &--sm {
+        max-width: 780px;
+    }
+}
+//end container
+
+
+img {
+    max-width: 100%;
+}

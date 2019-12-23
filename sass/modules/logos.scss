@@ -1,0 +1,8 @@
+.ck-logos {
+  img {
+    @include media-breakpoint-down(sm) {
+      max-width: 110px;
+      max-height: 30px;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+html, body, * {
+  font-family: $f-quicksand;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.56;
+  letter-spacing: -0.37px;
+}
+
+h1, .h1 {
+  font-family: $f-museo;
+  font-size: 52px;
+  font-weight: 900;
+  line-height: normal;
+  letter-spacing: -1.08px;
+  & + p {
+    margin-top: 10px;
+  }
+}
+
+h2, .h2 {
+  font-family: $f-museo;
+  font-size: 38px;
+  font-weight: 900;
+  line-height: normal;
+  letter-spacing: -0.79px;
+}
+
+h3, .h3 {
+  font-family: $f-museo;
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 0.81;
+  letter-spacing: -0.67px;
+}
+
+h4, .h4 {
+  font-family: $f-museo;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.5px;
+}
+
+h5, .h5 {
+  font-family: $f-quicksand;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.82;
+  letter-spacing: -0.46px;
+}
+
+h6, .h6 {
+  font-family: $f-quicksand;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.29px;
+}
+
+
+
+// Alignment
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+.text-nowrap         { white-space: nowrap; }
+
+// Transformation
+.text-lowercase      { text-transform: lowercase; }
+.text-uppercase      { text-transform: uppercase; }
+.text-capitalize     { text-transform: capitalize; }
+
+// Colors
+.text-brown          { color: $c-dark-taupe; }
+.text-orange         { color: $c-orangish; }
+.text-blue           { color: $c-seafoam-blue; }
+
+// Weight
+.text-bold, strong, b   { font-weight: bold; }

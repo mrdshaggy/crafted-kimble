@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'Quicksand';
+    src: url('subset-Quicksand-Medium.eot');
+    src: url('subset-Quicksand-Medium.eot?#iefix') format('embedded-opentype'),
+        url('subset-Quicksand-Medium.woff2') format('woff2'),
+        url('subset-Quicksand-Medium.woff') format('woff'),
+        url('subset-Quicksand-Medium.ttf') format('truetype'),
+        url('subset-Quicksand-Medium.svg#Quicksand-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('subset-Quicksand-SemiBold.eot');
+    src: url('subset-Quicksand-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('subset-Quicksand-SemiBold.woff2') format('woff2'),
+        url('subset-Quicksand-SemiBold.woff') format('woff'),
+        url('subset-Quicksand-SemiBold.ttf') format('truetype'),
+        url('subset-Quicksand-SemiBold.svg#Quicksand-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('subset-Quicksand-Regular.eot');
+    src: url('subset-Quicksand-Regular.eot?#iefix') format('embedded-opentype'),
+        url('subset-Quicksand-Regular.woff2') format('woff2'),
+        url('subset-Quicksand-Regular.woff') format('woff'),
+        url('subset-Quicksand-Regular.ttf') format('truetype'),
+        url('subset-Quicksand-Regular.svg#Quicksand-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('subset-Quicksand-Light.eot');
+    src: url('subset-Quicksand-Light.eot?#iefix') format('embedded-opentype'),
+        url('subset-Quicksand-Light.woff2') format('woff2'),
+        url('subset-Quicksand-Light.woff') format('woff'),
+        url('subset-Quicksand-Light.ttf') format('truetype'),
+        url('subset-Quicksand-Light.svg#Quicksand-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('subset-Quicksand-Bold.eot');
+    src: url('subset-Quicksand-Bold.eot?#iefix') format('embedded-opentype'),
+        url('subset-Quicksand-Bold.woff2') format('woff2'),
+        url('subset-Quicksand-Bold.woff') format('woff'),
+        url('subset-Quicksand-Bold.ttf') format('truetype'),
+        url('subset-Quicksand-Bold.svg#Quicksand-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Museo Sans Rounded 1000';
+    src: url('subset-MuseoSansRounded-1000.eot');
+    src: url('subset-MuseoSansRounded-1000.eot?#iefix') format('embedded-opentype'),
+        url('subset-MuseoSansRounded-1000.woff2') format('woff2'),
+        url('subset-MuseoSansRounded-1000.woff') format('woff'),
+        url('subset-MuseoSansRounded-1000.ttf') format('truetype'),
+        url('subset-MuseoSansRounded-1000.svg#MuseoSansRounded-1000') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Museo Sans Rounded 700';
+    src: url('subset-MuseoSansRounded-700.eot');
+    src: url('subset-MuseoSansRounded-700.eot?#iefix') format('embedded-opentype'),
+        url('subset-MuseoSansRounded-700.woff2') format('woff2'),
+        url('subset-MuseoSansRounded-700.woff') format('woff'),
+        url('subset-MuseoSansRounded-700.ttf') format('truetype'),
+        url('subset-MuseoSansRounded-700.svg#MuseoSansRounded-700') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Museo Sans Rounded 900';
+    src: url('subset-MuseoSansRounded-900.eot');
+    src: url('subset-MuseoSansRounded-900.eot?#iefix') format('embedded-opentype'),
+        url('subset-MuseoSansRounded-900.woff2') format('woff2'),
+        url('subset-MuseoSansRounded-900.woff') format('woff'),
+        url('subset-MuseoSansRounded-900.ttf') format('truetype'),
+        url('subset-MuseoSansRounded-900.svg#MuseoSansRounded-900') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Museo Sans Rounded 500';
+    src: url('subset-MuseoSansRounded-500.eot');
+    src: url('subset-MuseoSansRounded-500.eot?#iefix') format('embedded-opentype'),
+        url('subset-MuseoSansRounded-500.woff2') format('woff2'),
+        url('subset-MuseoSansRounded-500.woff') format('woff'),
+        url('subset-MuseoSansRounded-500.ttf') format('truetype'),
+        url('subset-MuseoSansRounded-500.svg#MuseoSansRounded-500') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

@@ -1,0 +1,43 @@
+.ck-section {
+  padding: 70px 0;
+  @include media-breakpoint-down(sm) {
+    padding: 30px 0;
+  }
+  
+  &--pink {
+    background-color: $c-very-light-pink;
+  }
+
+  &__bg {
+    padding: 70px 0;
+    @include media-breakpoint-down(sm) {
+      padding: 30px 0;
+    }
+    background-size: contain;
+    background-repeat: no-repeat;
+    &[data-bg="bottom right"] {
+      background-position: bottom right;
+    }
+  }
+
+  &--hero {
+    padding-top: 140px;
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  &--sm {
+    min-height: 80px;
+  }
+
+  .ck-hero-content {
+    max-width: 500px;
+    & > .ck-btn {
+      margin-top: 30px;
+    }
+  }
+}

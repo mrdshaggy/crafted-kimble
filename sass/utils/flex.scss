@@ -1,0 +1,169 @@
+// Flexbox grid styles
+// Set your spacers values in _variables.scss
+
+// .row-flex basic styles
+@mixin flexrow {
+  display: flex;
+  flex-direction: row;
+  margin: 0 (-$flex-col-space);
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+// .row-flex > .col basic styles
+@mixin flexcol {
+  padding-left: $flex-col-space;
+  padding-right: $flex-col-space;
+  box-sizing: border-box;
+}
+
+.row-flex {
+  @include flexrow;
+
+  [class*="row-flex"] {
+    margin: 0;
+  }
+
+  // Use class="col" if you want each item to have a space between columns
+  // Otherwise use additional class="mx-0" for a .row-flex for set up margin to 0 and remove minus space over the row
+  & > [class*="col"] {
+    @include flexcol;
+
+    // Columns modifiers
+    &.col--center {  align-self: center;  }
+    &.col--start  {  align-self: flex-start;  }
+    &.col--end    {  align-self: flex-end;  }
+
+    // Set a number of columns in 'variables' to use this
+    // FE if you have classes 'col-1' for 2 items inside row - columns will be equal 50% of row width
+    // You can use FE col-4, col-4, col-4 and you will have 3 columns equals for 33.3333% (like a bootstrap grid)
+    // If you use just 'col' class each column will be looks like inline element and take his own width
+    @for $i from 1 through $flex-columns {
+      &.col-#{$i} {
+        flex: $i;
+      }
+    }
+  }
+
+  //&--fluid {
+  //  @for $i from 1 through $flex-columns {
+  //    .col-#{$i} {
+  //      flex: 0 0 calc((100% / #{$flex-columns}) * #{$i}) !important;
+  //      max-width: calc((100% / #{$flex-columns}) * #{$i});
+  //    }
+  //    .col-offset-#{$i} {
+  //      margin-left: calc((100% / #{$flex-columns}) * #{$i});
+  //    }
+  //  }
+  //}
+
+  // content justifying
+  &--between  { justify-content: space-between; }
+  &--around   { justify-content: space-around; }
+  &--center   { justify-content: center; }
+  &--end      { justify-content: flex-end; }
+
+  // items alignment
+  &--middle   { align-items: center; }
+  &--bottom   { align-items: flex-end; }
+  &--top      { align-items: flex-start; }
+
+  // flex row modify
+  &--nowrap   { flex-wrap: nowrap; }
+  &--reverse  { flex-direction: row-reverse; }
+  &--column {
+    flex-direction: column;
+    &.row-flex--reverse {
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+
+// Responsive flexbox grid
+// use like class 'row-flex-md, row-flex-sm--between, col-1, col-2-md' etc.
+//
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    .row-flex-#{$breakpoint} {
+      @include flexrow;
+
+      & > [class*="col"] {
+
+        &.col--center {  align-self: center;  }
+        &.col--start  {  align-self: flex-start;  }
+        &.col--end    {  align-self: flex-end;  }
+      }
+
+      &--between  { justify-content: space-between; }
+      &--around   { justify-content: space-around; }
+      &--center   { justify-content: center; }
+      &--end      { justify-content: flex-end; }
+      &--middle   { align-items: center; }
+      &--bottom   { align-items: flex-end; }
+      &--top      { align-items: flex-start; }
+      &--nowrap   { flex-wrap: nowrap; }
+      &--reverse  { flex-direction: row-reverse; }
+      &--column {
+        flex-direction: column;
+        &.row-flex--reverse {
+          flex-direction: column-reverse;
+        }
+      }
+
+      &--gutter {
+        margin: 0 -$flex-col-space*2;
+        & > [class*="col"]  {
+          padding-left: $flex-col-space*2;
+          padding-right: $flex-col-space*2;
+        }
+      }
+    }
+
+    [class*="row-flex"] {
+      & > [class*="col"] {
+
+        &.col-#{$breakpoint}--center {  align-self: center;  }
+        &.col-#{$breakpoint}--start  {  align-self: flex-start;  }
+        &.col-#{$breakpoint}--end    {  align-self: flex-end;  }
+
+        @for $i from 1 through $flex-columns {
+          &.col-#{$breakpoint}-#{$i} {
+            flex: $i;
+          }
+        }
+      }
+
+      &-#{$breakpoint}--between  { justify-content: space-between; }
+      &-#{$breakpoint}--around   { justify-content: space-around; }
+      &-#{$breakpoint}--center   { justify-content: center; }
+      &-#{$breakpoint}--end      { justify-content: flex-end; }
+      &-#{$breakpoint}--middle   { align-items: center; }
+      &-#{$breakpoint}--bottom   { align-items: flex-end; }
+      &-#{$breakpoint}--top      { align-items: flex-start; }
+      &-#{$breakpoint}--nowrap   { flex-wrap: nowrap; }
+      &-#{$breakpoint}--reverse  { flex-direction: row-reverse; }
+      &-#{$breakpoint}--column {
+        flex-direction: column;
+        &.row-flex-#{$breakpoint}--reverse {
+          flex-direction: column-reverse;
+        }
+      }
+    }
+
+    //.row-flex {
+    //  &--fluid {
+    //    @for $i from 1 through $flex-columns {
+    //      .col-#{$breakpoint}-#{$i} {
+    //        flex: 0 0 calc((100% / #{$flex-columns}) * #{$i}) !important;
+    //        max-width: calc((100% / #{$flex-columns}) * #{$i});
+    //      }
+    //      .col-#{$breakpoint}-offset-#{$i} {
+    //        margin-left: calc((100% / #{$flex-columns}) * #{$i});
+    //      }
+    //    }
+    //  }
+    //}
+  }
+}
