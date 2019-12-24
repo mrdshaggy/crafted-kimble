@@ -1,0 +1,79 @@
+.ck-ingredients {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  &__img {
+    margin-bottom: 170px;
+  }
+
+  &__info {
+    position: absolute;
+    max-width: 230px;
+    text-align: center;
+    &:before {
+      content: '';
+      position: absolute;
+      height: 130px;
+      width: 1px;
+      background-image: linear-gradient(180deg, $c-seafoam-blue, $c-seafoam-blue 60%, transparent 60%, transparent 100%);
+      background-size: 1px 13px;
+      border: none;
+    }
+    &[data-position="tl"] {
+      top: 20px;
+      left: 20px;
+      &:before {
+        transform: rotate(110deg);
+        left: 290px;
+        top: 90px;
+      }
+    }
+    &[data-position="tr"] {
+      top: 40px;
+      right: 10px;
+      &:before {
+        transform: rotate(80deg);
+        background-image: linear-gradient(180deg, $c-orangish, $c-orangish 60%, transparent 60%, transparent 100%);
+        right: 300px;
+        top: 100px;
+        height: 110px;
+      }
+    }
+    &[data-position="bl"] {
+      bottom: 160px;
+      left: 100px;
+      &:before {
+        transform: rotate(70deg);
+        background-image: linear-gradient(180deg, $c-orangish, $c-orangish 60%, transparent 60%, transparent 100%);
+        left: 340px;
+        top: 0;
+      }
+    }
+    &[data-position="br"] {
+      bottom: 220px;
+      right: 60px;
+      &:before {
+        transform: rotate(105deg);
+        right: 295px;
+        top: 30px;
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: calc(100% + 13px);
+      height: 130px;
+      width: 1px;
+      background-image: linear-gradient(180deg, $c-dark-taupe, $c-dark-taupe 50%, transparent 50%, transparent 100%);
+      background-size: 1px 13px;
+      border: none;
+    }
+  }
+}

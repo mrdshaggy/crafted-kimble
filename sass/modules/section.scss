@@ -41,3 +41,20 @@
     }
   }
 }
+
+
+.ck-bordered {
+  position: relative;
+  padding-top: 70px;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 1px;
+    width: 100%;
+    background-image: linear-gradient(90deg, $c-dark-taupe, $c-dark-taupe 50%, transparent 50%, transparent 100%);
+    background-size: 13px 1px;
+    border: none;
+  }
+}

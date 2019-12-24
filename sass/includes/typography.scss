@@ -1,4 +1,4 @@
-html, body, * {
+html, body {
   font-family: $f-quicksand;
   font-size: 18px;
   font-weight: 500;
@@ -10,7 +10,7 @@ h1, .h1 {
   font-family: $f-museo;
   font-size: 52px;
   font-weight: 900;
-  line-height: normal;
+  line-height: 72px;
   letter-spacing: -1.08px;
   & + p {
     margin-top: 10px;
@@ -37,7 +37,7 @@ h4, .h4 {
   font-family: $f-museo;
   font-size: 24px;
   font-weight: 900;
-  line-height: 1.08;
+  line-height: 1.58;
   letter-spacing: -0.5px;
 }
 
@@ -55,6 +55,14 @@ h6, .h6 {
   font-weight: 500;
   line-height: normal;
   letter-spacing: -0.29px;
+}
+
+.text-medium {
+  font-family: $f-quicksand;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.63;
+  letter-spacing: 2.67px;
 }
 
 
@@ -75,6 +83,10 @@ h6, .h6 {
 .text-brown          { color: $c-dark-taupe; }
 .text-orange         { color: $c-orangish; }
 .text-blue           { color: $c-seafoam-blue; }
+.text-pink           { color: $c-faded-pink; }
 
 // Weight
 .text-bold, strong, b   { font-weight: bold; }
+
+// Other
+.text-overspaced     { letter-spacing: 3px; }

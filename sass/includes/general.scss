@@ -21,10 +21,20 @@ body {
     &--sm {
         max-width: 780px;
     }
+    &--xs {
+        max-width: 730px;
+    }
 }
 //end container
 
 
 img {
     max-width: 100%;
+}
+.ck-img-rounded {
+    img {
+        width: 100%;
+        border-radius: 50%;
+        overflow: hidden;
+    }
 }

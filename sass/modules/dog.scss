@@ -1,0 +1,43 @@
+.ck-dog {
+  display: flex!important;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__img {
+    min-width: 570px;
+    max-width: 570px;
+    height: 570px;
+    padding: 40px 40px 40px 80px;
+  }
+
+  &__info {
+    flex: 1;
+    padding: 0 80px 0 40px;
+  }
+
+  &__issues {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__diet {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    
+    & > img {
+      margin: 20px 40px 20px 20px;
+    }
+  }
+}
+
+.ck-dog-slider {
+
+}

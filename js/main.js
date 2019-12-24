@@ -1,3 +1,4 @@
+// Header 
 $(window).scroll(function() {    
   var scroll = $(window).scrollTop();
   if (scroll >= 500) {
@@ -5,4 +6,15 @@ $(window).scroll(function() {
   } else {
       $(".ck-header").removeClass("ck-header--scrolled");
   }
+});
+
+
+
+// Sliders
+$('.ck-dog-slider').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  // adaptiveHeight: true
 });
