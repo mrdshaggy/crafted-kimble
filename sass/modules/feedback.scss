@@ -1,0 +1,36 @@
+.ck-feedback {
+  text-align: center;
+  
+}
+
+.ck-rating {
+  width: 190px;
+  height: 25px;
+  background-image: url('../../img/five-stars.svg');
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 190px 25px;
+  &[data-rate="5"] {
+    width: 190px;
+  }
+  &[data-rate="4"] {
+    width: 148px;
+  }
+  &[data-rate="3"] {
+    width: 107px;
+  }
+  &[data-rate="2"] {
+    width: 66px;
+  }
+  &[data-rate="1"] {
+    width: 25px;
+  }
+}
+
+.ck-feedback-slider {
+  max-width: 760px;
+  padding: 0 60px;
+  @include media-breakpoint-down(lg) {
+    max-width: 580px;
+  }
+}

@@ -1,11 +1,14 @@
 .ck-header {
-  // height: 100px;
   position: absolute;
   z-index: 3;
   top: 0;
   left: 0;
   width: 100%;
-  // transition: .3s;
+  @include media-breakpoint-down(md) {
+    background: #fff;
+    border-bottom: solid 1px $c-dark-taupe;
+  }
+
 
   &__content {
     border-bottom: solid 1px $c-dark-taupe;
@@ -13,6 +16,13 @@
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
+    @include media-breakpoint-down(md) {
+      border: none;
+      height: 50px;
+      & > *:last-child {
+        flex: 1;
+      }
+    }
   }
   
   &__logo {
@@ -20,6 +30,14 @@
     width: 200px;
     height: 80px;
     margin-right: 90px;
+    @include media-breakpoint-down(lg) {
+      margin-right: 10px;
+    }
+    @include media-breakpoint-down(md) {
+      width: 120px;
+      height: auto;
+      margin: 0 20px;
+    }
     img + * {
       position: absolute;
       bottom: 0;
@@ -29,6 +47,9 @@
       font-weight: bold;
       text-transform: uppercase;
       color: $c-dark-taupe;
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
     }
   }
 
@@ -48,6 +69,9 @@
         margin-left: 23px;
       }
     }
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
   }
 
   &__link {
@@ -63,6 +87,14 @@
     transition: background-color .2s;
     &:hover {
       background-color: $c-very-light-pink;
+    }
+    @include media-breakpoint-down(lg) {
+      font-size: 16px;
+      padding: 0 13px;
+    }
+    @include media-breakpoint-down(md) {
+      // font-size: 14px;
+      // height: 60px;
     }
   }
 
@@ -84,4 +116,38 @@
 @keyframes slideDown {
   0% { transform:translateY(-100%); }
   100% { transform:translateY(0); }
+}
+
+
+.ck-burger {
+  width: 31px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  position: relative;
+  span, &:before, &:after {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: $c-orangish;
+    transition: .2s;
+  }
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &:after {
+    top: auto;
+    bottom: 0;
+  }
+
+  &:hover {
+    span, &:before, &:after {
+      background: #f7612c;
+    }
+  }
 }

@@ -5,4 +5,10 @@
   color: #fff;
   text-align: center;
   padding: 8px 15px;
+  @include media-breakpoint-down(lg) {
+    font-size: 16px;
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 14px;
+  }
 }

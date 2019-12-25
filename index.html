@@ -16,6 +16,7 @@
         <div class="ck-discount">50% OFF Your First Month! Use Code CKJOY50 at Checkout!</div>
         <div class="container">
             <div class="ck-header__content">
+                <button class="ck-burger hidden-md"><span></span></button>
                 <a href="index.html" class="ck-header__logo">
                     <img src="img/ck-logo.png" srcset="img/ck-logo@2x.png 2x, img/ck-logo@3x.png 3x">
                     <p>100% made in the usa</p>
@@ -29,14 +30,17 @@
                     </ul>
                     <ul>
                         <li><a href="#" class="ck-header__link">My Account</a></li>
-                        <li><button class="ck-btn ck-btn--blue ck-btn--sm">Get Started</button></li>
+                        <li><button class="ck-btn ck-btn--blue ck-btn--sm visible-md">Get Started</button></li>
                     </ul>
                 </nav>
+                <div class="text-right hidden-md">
+                    <button class="ck-btn ck-btn--blue ck-btn--sm">Get Started</button>
+                </div>
             </div>
         </div>
     </header>
 
-    <section class="ck-section ck-section--hero" style="background-image: url('/img/home-header@3x.jpg');">
+    <section class="ck-section ck-section--hero ck-section--homepage" style="background-image: url('/img/home-header@3x.jpg');">
         <div class="container">
             <div class="ck-hero-content">
                 <h1>
@@ -397,9 +401,116 @@
         </div>
     </section>
 
+    <section class="ck-section">
+        <div class="container">
+            <div class="row-flex">
+                <div class="col-7">
+                    <div class="text-brown">
+                        <div class="h1">
+                            <span class="text-brown">Crafted Kibble’s</span>
+                            <span class="text-orange">Core 4 Support </span>
+                        </div>
+                        <div class="text-container text-container--xs">
+                            <h5 class="mt-2">Our recipes focus on easy digestion, and our Core 4 System works to ensure that your pet stays happy and healthy. Core 4 System supports great gut health and is designed for necessary absorption of important nutrients. Our kibble works from the inside out to provide everything your pup needs from its food.</h5>
+                        </div>
+                    </div>
+                    <button class="ck-btn ck-btn--blue mt-2">Learn More About Our Food</button>
+                </div>
+                <div class="col-4 text-center">
+                    <img src="img/core-4-logo.svg">
+                    <div class="ck-icon-list mt-3">
+                        <div class="h6 text-orange">
+                            <span class="ck-icon-list__icon">
+                                <img src="img/guthealth.svg">
+                            </span>
+                            <span>supports gut <br> health</span>
+                        </div>
+                        <div class="h6 text-blue">
+                            <span class="ck-icon-list__icon">
+                                <img src="img/pets-hair-brush.svg">
+                            </span>
+                            <span>supports skin <br> and coat health</span>
+                        </div>
+                        <div class="h6 text-brown">
+                            <span class="ck-icon-list__icon">
+                                <img src="img/dog-poop-clean.svg">
+                            </span>
+                            <span>supports odor <br> control</span>
+                        </div>
+                        <div class="h6 text-pink">
+                            <span class="ck-icon-list__icon">
+                                <img src="img/study-brain-1.svg">
+                            </span>
+                            <span>supports brain <br> function</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ck-section ck-section--pink">
+        <div class="container">
+            <div class="row-flex row-flex--middle px-2">
+                <div class="col-7 col-xl-8">
+                    <div class="ck-feedback-slider">
+                        <div class="ck-feedback">
+                            <div class="ck-rating mx-auto mb-3" data-rate="5"></div>
+                            <h4 class="text-brown">“Very happy with the entire process. Feels good to know you're giving your dog the exact nutrition they need. All while enjoying the convenience of the pre-portioned packs and delivery. Compared to other premium dog food brands, I'm very happy with Crafted Kibble.”</h4>
+                            <p class="text-brown mt-2">Gina, TrustPilot Review</p>
+                        </div>
+                        <div class="ck-feedback">
+                            <div class="ck-rating mx-auto mb-3" data-rate="2"></div>
+                            <h4 class="text-brown">“Crafted Kibble is a great product! I never have to guess if I’m feeding them properly! A fan for life!”</h4>
+                            <p class="text-brown mt-2">Michel B, TrustPilot Review</p>
+                        </div>
+                        <div class="ck-feedback">
+                            <div class="ck-rating mx-auto mb-3" data-rate="4"></div>
+                            <h4 class="text-brown">“I love to have a balanced meal plan for my dog! Crafted Kibble is a great value and it’s free delivery!”</h4>
+                            <p class="text-brown mt-2">Mauricio B, TrustPilot Review</p>
+                        </div>
+                        <div class="ck-feedback">
+                            <div class="ck-rating mx-auto mb-3" data-rate="3"></div>
+                            <h4 class="text-brown">“Very happy with the entire process. Feels good to know you're giving your dog the exact nutrition they need. All while enjoying the convenience of the pre-portioned packs and delivery. Compared to other premium dog food brands, I'm very happy with Crafted Kibble.”</h4>
+                            <p class="text-brown mt-2">Gina, TrustPilot Review</p>
+                        </div>
+                    </div>
+                    <div class="text-container text-container--xs text-center mt-2">
+                        <a href="#" class="ck-btn ck-btn--brown ml-3-xl">More Reviews</a>
+                    </div>
+                </div>
+                <div class="col-4 col-xl-3">
+                    <div class="ck-img-rounded">
+                        <img src="img/review-m.jpg" srcset="img/review-m@2x.jpg 2x, img/review-m@3x.jpg 3x">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="ck-footer">
         <div class="container">
-            <h3>Footer</h3>
+            <div class="ck-footer__container">
+                <div class="ck-footer__logo">
+                    <img src="img/ck-logo-white.png" srcset="img/ck-logo-white@2x.png 2x, img/ck-logo-white@3x.png 3x">
+                </div>
+                <nav class="ck-footer__nav">
+                    <a href="#">How It Works</a>
+                    <a href="#">Our Food</a>
+                    <a href="#">Our Beliefs</a>
+                    <a href="#">FAQs</a>
+                    <a href="#">Contact Us</a>
+                </nav>
+                <div class="ck-footer__socials">
+                    <a href="#"><img src="img/facebook-f.svg"></a>
+                    <a href="#"><img src="img/twitter.svg"></a>
+                    <a href="#"><img src="img/instagram.svg"></a>
+                    <a href="#" class="ck-btn ck-btn--sm ck-btn--orange">Get Started</a>
+                </div>
+            </div>
+            <div class="ck-footer__license h6">
+                Copyright © 2019 Crafted Kibble, LLC | Privacy Policy | Terms & Conditions
+            </div>
         </div>
     </footer>
 

@@ -22,14 +22,27 @@
 
   &--hero {
     padding-top: 140px;
-    background-position: right;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 95vh;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    @include media-breakpoint-down(md) {
+      min-height: 0;
+    }
   }
+
+  &--homepage {
+    @include media-breakpoint-down(md) {
+      background-position: right;
+      background-size: contain;
+      padding-top: 200px;
+    }
+  }
+
+
   &--sm {
     min-height: 80px;
   }
@@ -38,6 +51,9 @@
     max-width: 500px;
     & > .ck-btn {
       margin-top: 30px;
+    }
+    @include media-breakpoint-down(md) {
+      max-width: 50%;
     }
   }
 }

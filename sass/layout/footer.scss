@@ -1,0 +1,66 @@
+.ck-footer {
+  background-color: $c-dark-taupe;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 115px;
+  }
+
+  &__logo {
+    flex-basis: 200px;
+    @include media-breakpoint-down(lg) {
+      flex-basis: 150px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    padding: 0 60px;
+    @include media-breakpoint-down(lg) {
+      padding: 0 30px;
+    }
+    a {
+      color: #fff;
+      font-family: $f-museo;
+      font-size: 18px;
+      font-weight: 900;
+      transition: .2s;
+      @include media-breakpoint-down(lg) {
+        font-size: 16px;
+      }
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__socials {
+    a {
+      margin-left: 20px;
+      transition: .2s;
+      &:hover:not(.ck-btn) {
+        opacity: 0.7;
+      }
+      @include media-breakpoint-down(lg) {
+        margin-left: 10px;
+      }
+      &.ck-btn {
+        margin-left: 30px;
+        @include media-breakpoint-down(lg) {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  &__license {
+    text-align: center;
+    color: #fff;
+    padding: 15px 0;
+    border-top: solid 1px $c-orangish;
+  }
+}

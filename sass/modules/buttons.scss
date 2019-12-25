@@ -12,6 +12,7 @@ a, button {
   align-items: center;
   align-content: center;
   justify-content: center;
+  white-space: nowrap;
   padding: 0 19px;
   color: #fff;
   font-family: $f-museo;
@@ -23,6 +24,20 @@ a, button {
     background: $c-seafoam-blue;
     &:hover {
       background: $c-teal-blue;
+    }
+  }
+
+  &--brown {
+    background: $c-dark-taupe;
+    &:hover {
+      background: $c-greyish-brown;
+    }
+  }
+
+  &--orange {
+    background: $c-orangish;
+    &:hover {
+      background: #f7612c;
     }
   }
 

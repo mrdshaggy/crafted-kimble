@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="268" height="268" viewBox="0 0 268 268">
+    <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+        <circle cx="133" cy="133" r="133" fill="#DA9BB6" stroke="#FFF"/>
+        <circle cx="133.5" cy="132.5" r="120.5" fill="#5CCCD8" stroke="#FFF"/>
+        <circle cx="133" cy="132" r="106" fill="#7A5548" stroke="#FFF"/>
+        <circle cx="133" cy="132" r="91" fill="#F47E54" stroke="#FFF"/>
+        <text fill="#FFF" font-family="MuseoSansRounded-700, Museo Sans Rounded" font-size="118" font-weight="400" letter-spacing="-2.458">
+            <tspan x="115" y="171">4</tspan>
+        </text>
+        <text fill="#FFF" font-family="Quicksand-Bold, Quicksand" font-size="24" font-weight="bold" letter-spacing="5.333" transform="rotate(-90 92.5 132)">
+            <tspan x="50" y="143">CORE</tspan>
+        </text>
+    </g>
+</svg>
