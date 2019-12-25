@@ -46,6 +46,9 @@
   justify-content: center;
   flex-wrap: nowrap;
   margin-top: 50px;
+  @include media-breakpoint-down(md) {
+    margin-top: 20px;
+  }
   button {
     font-size: 0;
     padding: 0;
@@ -55,6 +58,7 @@
     border-radius: 50%;
     margin: 0 5px;
     transition: .2s;
+    background: none;
   }
   .slick-active button {
     background: $c-orangish;
@@ -65,5 +69,11 @@
 .ck-dog-slider {
   .slick-arrow {
     top: 250px;
+    @include media-breakpoint-down(md) {
+      top: 280px;
+    }
+    @include media-breakpoint-down(sm) {
+      top: 120px;
+    }
   }
 }

@@ -167,3 +167,16 @@
     //}
   }
 }
+
+
+.fb-sm-100 {
+  @include media-breakpoint-down(sm) {
+    flex-basis: 100%;
+  }
+}
+
+.maxw-sm-100 {
+  @include media-breakpoint-down(sm) {
+    max-width: 100%;
+  }
+}

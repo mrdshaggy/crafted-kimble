@@ -4,6 +4,9 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  @include media-breakpoint-down(md) {
+    flex-wrap: wrap;
+  }
 
   &__img {
     min-width: 570px;
@@ -15,6 +18,17 @@
       max-width: 400px;
       height: 400px;
       padding: 20px 20px 20px 40px;
+    }
+    @include media-breakpoint-down(md) {
+      min-width: 0;
+      max-width: 100%;
+      flex-basis: 100%;
+      height: auto;
+      padding: 0 40px;
+      margin-bottom: 30px;
+      & > img {
+        width: 100%;
+      }
     }
   }
 
@@ -40,11 +54,26 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    @include media-breakpoint-down(md) {
+      justify-content: center;
+    }
+    @include media-breakpoint-down(sm) {
+      flex-wrap: wrap;
+      * {
+        font-size: 14px;
+      }
+    }
     
     & > img {
       margin: 20px 40px 20px 20px;
       @include media-breakpoint-down(lg) {
         margin: 0 20px 20px 0;
+      }
+      @include media-breakpoint-down(md) {
+        margin: 0 20px 0 0;
+      }
+      @include media-breakpoint-down(sm) {
+        margin: 0 0 20px;
       }
     }
   }

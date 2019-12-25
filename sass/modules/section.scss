@@ -1,7 +1,7 @@
 .ck-section {
   padding: 70px 0;
   @include media-breakpoint-down(sm) {
-    padding: 30px 0;
+    padding: 40px 0;
   }
   
   &--pink {
@@ -10,11 +10,20 @@
 
   &__bg {
     padding: 70px 0;
-    @include media-breakpoint-down(sm) {
-      padding: 30px 0;
-    }
     background-size: contain;
     background-repeat: no-repeat;
+    @include media-breakpoint-down(md) {
+      .text-container {
+        max-width: 50%;
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 0;
+      background: none!important;
+      .text-container {
+        max-width: 100%;
+      }
+    }
     &[data-bg="bottom right"] {
       background-position: bottom right;
     }
@@ -32,6 +41,7 @@
     @include media-breakpoint-down(md) {
       min-height: 0;
     }
+    
   }
 
   &--homepage {
@@ -39,6 +49,11 @@
       background-position: right;
       background-size: contain;
       padding-top: 200px;
+    }
+    @include media-breakpoint-down(sm) {
+      padding-top: 140px;
+      background-size: cover;
+      background-position: 40% 30px;
     }
   }
 

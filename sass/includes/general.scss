@@ -45,6 +45,9 @@ body {
             max-width: 580px;
         }
     }
+    @include media-breakpoint-down(sm) {
+        max-width: 100%!important;
+    }
 }
 //end container
 
@@ -67,9 +70,13 @@ img {
         display: none!important;
     }
 }
-
 .visible-md {
     @include media-breakpoint-down(md) {
+        display: none!important;
+    }
+}
+.visible-sm {
+    @include media-breakpoint-up(md) {
         display: none!important;
     }
 }

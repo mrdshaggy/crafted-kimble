@@ -5,12 +5,22 @@
     align-items: center;
     justify-content: space-between;
     height: 115px;
+    @include media-breakpoint-down(md) {
+      height: auto;
+      // padding: 60px 0 40px;
+      padding: 20px 0;
+      flex-wrap: wrap;
+    }
   }
 
   &__logo {
     flex-basis: 200px;
     @include media-breakpoint-down(lg) {
       flex-basis: 150px;
+    }
+    @include media-breakpoint-down(md) {
+      flex-basis: 100%;
+      text-align: center;
     }
   }
 
@@ -23,6 +33,14 @@
     @include media-breakpoint-down(lg) {
       padding: 0 30px;
     }
+    @include media-breakpoint-down(md) {
+      flex-basis: 100%;
+      margin-top: 20px;
+      justify-content: space-around;
+    }
+    @include media-breakpoint-down(sm) {
+      flex-wrap: wrap;
+    }
     a {
       color: #fff;
       font-family: $f-museo;
@@ -32,6 +50,11 @@
       @include media-breakpoint-down(lg) {
         font-size: 16px;
       }
+      @include media-breakpoint-down(sm) {
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+      }
       &:hover {
         opacity: 0.7;
       }
@@ -39,6 +62,11 @@
   }
 
   &__socials {
+    @include media-breakpoint-down(md) {
+      flex-basis: 100%;
+      text-align: center;
+      margin-top: 20px;
+    }
     a {
       margin-left: 20px;
       transition: .2s;
