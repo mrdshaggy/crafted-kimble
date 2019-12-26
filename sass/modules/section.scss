@@ -3,6 +3,13 @@
   @include media-breakpoint-down(sm) {
     padding: 40px 0;
   }
+  &.ck-bordered {
+    padding: 0;
+    // margin: 70px 0;
+    @include media-breakpoint-down(sm) {
+      // margin: 40px 0;
+    }
+  }
   
   &--pink {
     background-color: $c-very-light-pink;
@@ -57,9 +64,36 @@
     }
   }
 
+  &--howitworks {
+    background-size: contain;
+    background-position: right;
+    padding-bottom: 0;
+  }
+
+  &--fullbg {
+    background-size: cover;
+    background-position: center;
+    padding: 200px 0;
+  }
+
 
   &--sm {
     min-height: 80px;
+  }
+  
+  &--video {
+    padding: 0;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: $c-very-light-pink;
+    }
   }
 
   .ck-hero-content {
@@ -87,5 +121,34 @@
     background-image: linear-gradient(90deg, $c-dark-taupe, $c-dark-taupe 50%, transparent 50%, transparent 100%);
     background-size: 13px 1px;
     border: none;
+  }
+}
+
+.ck-half-border {
+  display: flex;
+  flex-direction: row;
+  & > * {
+    flex-basis: 50%;
+    padding: 100px 0;
+    @include media-breakpoint-down(sm) {
+      padding: 50px 0;
+    }
+    &:first-child {
+      padding-right: 100px;
+    }
+    &:last-child {
+      padding-left: 100px;
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 100%;
+        background-image: linear-gradient(180deg, $c-dark-taupe, $c-dark-taupe 50%, transparent 50%, transparent 100%);
+        background-size: 1px 13px;
+      }
+    }
   }
 }

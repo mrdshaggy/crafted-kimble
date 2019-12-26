@@ -3512,6 +3512,9 @@ h6, .h6 {
 .text-pink {
   color: #da9bb6; }
 
+.text-white {
+  color: #fff; }
+
 .text-bold, strong, b {
   font-weight: bold; }
 
@@ -3563,6 +3566,8 @@ body {
     @media (max-width: 1199px) {
       .text-container--xs {
         max-width: 580px; } }
+  .text-container--xxs {
+    max-width: 600px; }
   @media (max-width: 767px) {
     .text-container {
       max-width: 100% !important; } }
@@ -3574,6 +3579,29 @@ img {
   width: 100%;
   border-radius: 50%;
   overflow: hidden; }
+
+.ck-img-rounded[data-number] {
+  position: relative; }
+  .ck-img-rounded[data-number]:before {
+    content: attr(data-number);
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    width: 94px;
+    height: 94px;
+    border-radius: 50%;
+    background: #f47e54;
+    color: #fff;
+    font-family: MuseoSansRounded;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1.08px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center; }
 
 @media (min-width: 992px) {
   .hidden-md {
@@ -3722,6 +3750,8 @@ a, button {
   @media (max-width: 767px) {
     .ck-section {
       padding: 40px 0; } }
+  .ck-section.ck-bordered {
+    padding: 0; }
   .ck-section--pink {
     background-color: #fdf6f5; }
   .ck-section__bg {
@@ -3764,8 +3794,28 @@ a, button {
       padding-top: 140px;
       background-size: cover;
       background-position: 40% 30px; } }
+  .ck-section--howitworks {
+    background-size: contain;
+    background-position: right;
+    padding-bottom: 0; }
+  .ck-section--fullbg {
+    background-size: cover;
+    background-position: center;
+    padding: 200px 0; }
   .ck-section--sm {
     min-height: 80px; }
+  .ck-section--video {
+    padding: 0;
+    position: relative; }
+    .ck-section--video:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #fdf6f5; }
   .ck-section .ck-hero-content {
     max-width: 500px; }
     .ck-section .ck-hero-content > .ck-btn {
@@ -3787,6 +3837,33 @@ a, button {
     background-image: linear-gradient(90deg, #7a5548, #7a5548 50%, transparent 50%, transparent 100%);
     background-size: 13px 1px;
     border: none; }
+
+.ck-half-border {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row; }
+  .ck-half-border > * {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    padding: 100px 0; }
+    @media (max-width: 767px) {
+      .ck-half-border > * {
+        padding: 50px 0; } }
+    .ck-half-border > *:first-child {
+      padding-right: 100px; }
+    .ck-half-border > *:last-child {
+      padding-left: 100px;
+      position: relative; }
+      .ck-half-border > *:last-child:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 100%;
+        background-image: linear-gradient(180deg, #7a5548, #7a5548 50%, transparent 50%, transparent 100%);
+        background-size: 1px 13px; }
 
 @media (max-width: 767px) {
   .ck-logos img {
@@ -4213,9 +4290,9 @@ a, button {
     -ms-flex-align: center;
         align-items: center;
     background-color: transparent;
-    transition: background-color .2s; }
-    .ck-header__link:hover {
-      background-color: #fdf6f5; }
+    transition: color .2s; }
+    .ck-header__link:hover, .ck-header__link.is-active {
+      color: #f47e54; }
     @media (max-width: 1199px) {
       .ck-header__link {
         font-size: 16px;

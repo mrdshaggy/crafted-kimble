@@ -45,6 +45,12 @@ body {
             max-width: 580px;
         }
     }
+    &--xxs {
+        max-width: 600px;
+        @include media-breakpoint-down(lg) {
+            // max-width: 500px;
+        }
+    }
     @include media-breakpoint-down(sm) {
         max-width: 100%!important;
     }
@@ -60,6 +66,27 @@ img {
         width: 100%;
         border-radius: 50%;
         overflow: hidden;
+    }
+    &[data-number] {
+        position: relative;
+        &:before {
+            content: attr(data-number);
+            position: absolute;
+            top: -10px;
+            left: -20px;
+            width: 94px;
+            height: 94px;
+            border-radius: 50%;
+            background: $c-orangish;
+            color: #fff;
+            font-family: MuseoSansRounded;
+            font-size: 52px;
+            font-weight: 900;
+            letter-spacing: -1.08px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 }
 
