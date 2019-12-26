@@ -3002,6 +3002,16 @@
         flex-basis: 100%; } }
 
 @media (max-width: 767px) {
+  .fb-sm-50 {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%; } }
+
+@media (max-width: 991px) {
+  .fb-md-50 {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%; } }
+
+@media (max-width: 767px) {
   .maxw-sm-100 {
     max-width: 100%; } }
 
@@ -3425,6 +3435,10 @@ h2, .h2 {
   font-weight: 900;
   line-height: normal;
   letter-spacing: -0.79px; }
+  @media (max-width: 991px) {
+    h2, .h2 {
+      font-size: 24px;
+      letter-spacing: -0.5px; } }
 
 h3, .h3 {
   font-family: "MuseoSansRounded";
@@ -3432,6 +3446,10 @@ h3, .h3 {
   font-weight: 900;
   line-height: 0.81;
   letter-spacing: -0.67px; }
+  @media (max-width: 991px) {
+    h3, .h3 {
+      font-size: 22px;
+      line-height: 1; } }
 
 h4, .h4 {
   font-family: "MuseoSansRounded";
@@ -3582,6 +3600,9 @@ img {
 
 .ck-img-rounded[data-number] {
   position: relative; }
+  @media (max-width: 767px) {
+    .ck-img-rounded[data-number] {
+      max-width: 300px; } }
   .ck-img-rounded[data-number]:before {
     content: attr(data-number);
     position: absolute;
@@ -3602,6 +3623,17 @@ img {
         align-items: center;
     -ms-flex-pack: center;
         justify-content: center; }
+    @media (max-width: 991px) {
+      .ck-img-rounded[data-number]:before {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        top: 0;
+        left: 0; } }
+    @media (max-width: 767px) {
+      .ck-img-rounded[data-number]:before {
+        top: 10px;
+        left: 10px; } }
 
 @media (min-width: 992px) {
   .hidden-md {
@@ -3614,6 +3646,15 @@ img {
 @media (min-width: 768px) {
   .visible-sm {
     display: none !important; } }
+
+@media (max-width: 767px) {
+  .hidden-xs {
+    display: none !important; } }
+
+@media (max-width: 767px) {
+  .icon-responsive {
+    width: 40px;
+    height: 40px; } }
 
 .slick-arrow {
   position: absolute;
@@ -3796,17 +3837,58 @@ a, button {
       background-position: 40% 30px; } }
   .ck-section--howitworks {
     background-size: contain;
-    background-position: right;
+    background-position: 80% center;
     padding-bottom: 0; }
+    @media (max-width: 1440px) {
+      .ck-section--howitworks {
+        background-position: right; } }
+    @media (max-width: 1199px) {
+      .ck-section--howitworks {
+        background-position: 150% center; } }
+    @media (max-width: 991px) {
+      .ck-section--howitworks {
+        background-position: right 25%;
+        background-size: 60%; } }
+    @media (max-width: 767px) {
+      .ck-section--howitworks {
+        background: none; } }
   .ck-section--fullbg {
     background-size: cover;
-    background-position: center;
-    padding: 200px 0; }
+    background-position: right;
+    padding: 200px 0;
+    position: relative; }
+    @media (max-width: 991px) {
+      .ck-section--fullbg {
+        padding: 100px 0; }
+        .ck-section--fullbg:before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          background: rgba(0, 0, 0, 0.4);
+          z-index: 1; }
+        .ck-section--fullbg .container {
+          position: relative;
+          z-index: 2; } }
+    @media (max-width: 767px) {
+      .ck-section--fullbg {
+        padding: 30px 0 50px; } }
   .ck-section--sm {
     min-height: 80px; }
   .ck-section--video {
     padding: 0;
     position: relative; }
+    @media (max-width: 1199px) {
+      .ck-section--video {
+        padding-bottom: 40px; } }
+    @media (max-width: 991px) {
+      .ck-section--video {
+        padding: 70px 0 40px; } }
+    @media (max-width: 767px) {
+      .ck-section--video {
+        padding: 30px 0; } }
     .ck-section--video:before {
       content: '';
       position: absolute;
@@ -3823,6 +3905,9 @@ a, button {
     @media (max-width: 991px) {
       .ck-section .ck-hero-content {
         max-width: 50%; } }
+    @media (max-width: 767px) {
+      .ck-section .ck-hero-content {
+        max-width: 100%; } }
 
 .ck-bordered {
   position: relative;
@@ -3838,24 +3923,39 @@ a, button {
     background-size: 13px 1px;
     border: none; }
 
-.ck-half-border {
+.ck-group-bordered {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
       flex-direction: row; }
-  .ck-half-border > * {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
+  @media (max-width: 767px) {
+    .ck-group-bordered {
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; } }
+  .ck-group-bordered > * {
+    -ms-flex: 1;
+        flex: 1;
     padding: 100px 0; }
-    @media (max-width: 767px) {
-      .ck-half-border > * {
+    @media (max-width: 991px) {
+      .ck-group-bordered > * {
         padding: 50px 0; } }
-    .ck-half-border > *:first-child {
+    @media (max-width: 767px) {
+      .ck-group-bordered > * {
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+        padding: 40px 0 !important; } }
+    .ck-group-bordered > *:first-child {
       padding-right: 100px; }
-    .ck-half-border > *:last-child {
+      @media (max-width: 991px) {
+        .ck-group-bordered > *:first-child {
+          padding-right: 50px; } }
+    .ck-group-bordered > *:last-child {
       padding-left: 100px;
       position: relative; }
-      .ck-half-border > *:last-child:before {
+      @media (max-width: 991px) {
+        .ck-group-bordered > *:last-child {
+          padding-left: 50px; } }
+      .ck-group-bordered > *:last-child:before {
         content: '';
         position: absolute;
         top: 0;
@@ -3864,6 +3964,12 @@ a, button {
         height: 100%;
         background-image: linear-gradient(180deg, #7a5548, #7a5548 50%, transparent 50%, transparent 100%);
         background-size: 1px 13px; }
+        @media (max-width: 767px) {
+          .ck-group-bordered > *:last-child:before {
+            width: 100%;
+            height: 1px;
+            background-image: linear-gradient(90deg, #7a5548, #7a5548 50%, transparent 50%, transparent 100%);
+            background-size: 13px 1px; } }
 
 @media (max-width: 767px) {
   .ck-logos img {

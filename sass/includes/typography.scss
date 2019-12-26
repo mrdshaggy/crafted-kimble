@@ -40,6 +40,10 @@ h2, .h2 {
   font-weight: 900;
   line-height: normal;
   letter-spacing: -0.79px;
+  @include media-breakpoint-down(md) {
+    font-size: 24px;
+    letter-spacing: -0.5px;
+  }
 }
 
 h3, .h3 {
@@ -48,6 +52,10 @@ h3, .h3 {
   font-weight: 900;
   line-height: 0.81;
   letter-spacing: -0.67px;
+  @include media-breakpoint-down(md) {
+    font-size: 22px;
+    line-height: 1;
+  }
 }
 
 h4, .h4 {
