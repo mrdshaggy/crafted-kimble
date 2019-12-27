@@ -3911,6 +3911,21 @@ a, button {
       .ck-section--aafco {
         background: none !important;
         padding: 0; } }
+  .ck-section--faq {
+    position: relative;
+    overflow: hidden; }
+    .ck-section--faq .container {
+      position: relative; }
+    .ck-section--faq .ck-faq-img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      z-index: -1; }
+      @media (max-width: 767px) {
+        .ck-section--faq .ck-faq-img {
+          position: static;
+          transform: none; } }
   .ck-section--sm {
     min-height: 80px; }
   .ck-section--video {
@@ -4029,6 +4044,12 @@ a, button {
     @media (max-width: 767px) {
       .ck-ourfood__img {
         position: static; } }
+
+.ck-faq-group {
+  margin-bottom: 90px; }
+  @media (max-width: 767px) {
+    .ck-faq-group {
+      margin-bottom: 50px; } }
 
 @media (max-width: 767px) {
   .ck-logos img {
@@ -4447,15 +4468,15 @@ a, button {
       -ms-flex-align: center;
           align-items: center;
       width: 100%;
-      height: 62px;
+      padding: 10px 30px 10px 0;
       color: #7a5548;
-      padding: 0;
       position: relative;
       transition: .2s;
-      background: none; }
+      background: none;
+      text-align: left; }
       @media (max-width: 767px) {
         .ck-collapse-group .ck-collapse__btn {
-          height: 34px; } }
+          padding: 7px 30px 7px 0; } }
       .ck-collapse-group .ck-collapse__btn:hover {
         color: #f47e54; }
       .ck-collapse-group .ck-collapse__btn:after {
