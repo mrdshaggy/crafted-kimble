@@ -83,6 +83,26 @@
     }
   }
 
+  &--ourfood {
+    min-height: 80vh;
+    padding: 250px 0 130px;
+    @include media-breakpoint-down(lg) {
+      min-height: 0;
+      padding: 220px 0 100px;
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 125px 0 35px;
+    }
+    .ck-hero-content {
+      max-width: 600px;
+      text-align: center;
+      margin: 0 auto;
+      @include media-breakpoint-down(sm) {
+        max-width: 400px;
+      }
+    }
+  }
+
   &--fullbg {
     background-size: cover;
     background-position: right;
@@ -107,6 +127,19 @@
     }
     @include media-breakpoint-down(sm) {
       padding: 30px 0 50px;
+    }
+  }
+
+  &--aafco {
+    background-size: cover;
+    padding: 135px 0;
+    @include media-breakpoint-down(lg) {
+      background-position: 50% center;
+      padding: 100px 0;
+    }
+    @include media-breakpoint-down(sm) {
+      background: none!important;
+      padding: 0;
     }
   }
 
@@ -138,21 +171,20 @@
       background: $c-very-light-pink;
     }
   }
-
-  .ck-hero-content {
-    max-width: 500px;
-    & > .ck-btn {
-      margin-top: 30px;
-    }
-    @include media-breakpoint-down(md) {
-      max-width: 50%;
-    }
-    @include media-breakpoint-down(sm) {
-      max-width: 100%;
-    }
-  }
 }
 
+.ck-hero-content {
+  max-width: 500px;
+  & > .ck-btn {
+    margin-top: 30px;
+  }
+  @include media-breakpoint-down(md) {
+    max-width: 50%;
+  }
+  @include media-breakpoint-down(sm) {
+    max-width: 100%;
+  }
+}
 
 .ck-bordered {
   position: relative;
@@ -214,6 +246,30 @@
           background-size: 13px 1px;
         }
       }
+    }
+  }
+}
+
+.ck-ourfood {
+  padding: 100px 0 150px;
+  position: relative;
+  @include media-breakpoint-down(lg) {
+    padding: 50px 0 100px;
+  }
+  @include media-breakpoint-down(md) {
+    padding: 0;
+  }
+  &__img {
+    position: absolute;
+    right: -100px;
+    top: 0;
+    z-index: -1;
+    @include media-breakpoint-down(lg) {
+      top: -80px;
+      right: -200px;
+    }
+    @include media-breakpoint-down(sm) {
+      position: static;
     }
   }
 }

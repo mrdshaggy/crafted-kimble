@@ -1,0 +1,44 @@
+.ck-circle {
+  width: 530px;
+  height: 530px;
+  background: $c-seafoam-blue;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  padding: 50px 100px 80px;
+
+  @include media-breakpoint-down(md) {
+    width: 400px;
+    height: 400px;
+    padding: 50px;
+    h4, .h4 {
+      font-size: 18px;
+      line-height: 1.57;
+      letter-spacing: -0.29px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    max-width: 280px;
+    max-height: 280px;
+    padding: 30px;
+    margin: 0 auto;
+    h4, .h4 {
+      font-size: 14px;
+    }
+  }
+
+  &__img {
+    @include media-breakpoint-down(sm) {
+      max-height: 50px;
+    }
+  }
+
+  &--orange {
+    background: $c-orangish;
+  }
+
+  &--bordered {
+    border: 3px solid #fff;
+  }
+}

@@ -1,0 +1,19 @@
+.ck-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  &__btn {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: -0.46px;
+    color: $c-dark-taupe;
+    transition: .2s;
+    padding: 0 5px;
+    background: none;
+    &:hover,
+    &.is-active {
+      color: $c-orangish;
+    }
+  }
+}

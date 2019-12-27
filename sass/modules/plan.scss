@@ -1,0 +1,40 @@
+.ck-plan {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  @include media-breakpoint-down(lg) {
+    flex-wrap: wrap;
+  }
+  &__img {
+    min-width: 650px;
+    padding: 0 50px;
+    @include media-breakpoint-down(lg) {
+      min-width: 0;
+      padding: 0;
+      flex-basis: 100%;
+      text-align: center;
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 0 20px;
+      margin-left: -15px;
+    }
+  }
+
+  &__description {
+    padding-top: 50px;
+    h1, .h1 {
+      line-height: 1.19;
+    }
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+    }
+  }
+
+  &__info {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.33;
+    letter-spacing: -0.25px;
+    text-align: left;
+  }
+}

@@ -27,3 +27,10 @@ $('.ck-feedback-slider').slick({
   slidesToShow: 1,
   // adaptiveHeight: true
 });
+
+
+// Collapse
+$(".ck-collapse__btn").click(function(){
+  $(this).parent('.ck-collapse').toggleClass('is-active');
+  $(this).next().slideToggle('100');
+});

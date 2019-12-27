@@ -71,6 +71,12 @@ h4, .h4 {
   @include media-breakpoint-down(sm) {
     font-size: 18px;
   }
+  &.f-quicksaand {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.5;
+    letter-spacing: -0.2px;
+  }
 }
 
 h5, .h5 {
@@ -103,6 +109,11 @@ h6, .h6 {
   font-weight: bold;
   line-height: 1.63;
   letter-spacing: 2.67px;
+}
+
+// Family
+.f-quicksaand {
+  font-family: $f-quicksand!important;
 }
 
 
