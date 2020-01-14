@@ -34,3 +34,11 @@ $(".ck-collapse__btn").click(function(){
   $(this).parent('.ck-collapse').toggleClass('is-active');
   $(this).next().slideToggle('100');
 });
+
+// Mobile nav
+$('.ck-burger').click(function() {
+  $('.ck-header__nav').addClass('is-active');
+});
+$('.ck-close-nav').click(function() {
+  $('.ck-header__nav').removeClass('is-active');
+});

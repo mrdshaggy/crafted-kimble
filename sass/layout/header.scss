@@ -70,7 +70,33 @@
       }
     }
     @include media-breakpoint-down(md) {
-      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 400px;
+      background-color: $c-orangish;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 27px;
+      transform: translateX(-100%);
+      transition: .3s ease-in-out;
+      ul {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      & > *:last-child {
+        align-self: center;
+        justify-self: flex-end;
+        margin-top: auto;
+      }
+      &.is-active {
+        transform: none;
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      width: 230px;
     }
   }
 
@@ -92,6 +118,22 @@
     @include media-breakpoint-down(lg) {
       font-size: 16px;
       padding: 0 13px;
+    }
+    @include media-breakpoint-down(md) {
+      color: #fff;
+      height: auto;
+      margin-top: 25px;
+      padding: 0;
+      text-transform: uppercase;
+      font-family: $f-quicksand;
+      &:hover {
+        color: #fff;
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      @media (orientation: landscape) {
+        margin-top: 15px;
+      }
     }
   }
 
@@ -147,5 +189,12 @@
     span, &:before, &:after {
       background: #f7612c;
     }
-  }
+  }  
+}
+
+.ck-close-nav {
+  position: absolute;
+  top: 16px;
+  right: 12px;
+  z-index: 2;
 }
